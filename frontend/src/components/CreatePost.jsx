@@ -20,7 +20,7 @@ const CreatePost = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/posts', formData, {
+      const response = await axios.post('https://mern-blog-backend-7svl.onrender.com/api/posts', formData, {
         headers: { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data'
