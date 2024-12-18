@@ -12,7 +12,7 @@ const UserBlogs = () => {
     const fetchUserPosts = async () => {
       try {
         const userId = getCurrentUserId();
-        const res = await axios.get(`http://localhost:5000/api/posts/user/${userId}`, {
+        const res = await axios.get(`https://mern-blog-backend-7svl.onrender.com/api/posts/user/${userId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         setPosts(res.data);

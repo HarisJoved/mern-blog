@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', { username, email, password });
+      await axios.post('https://mern-blog-backend-7svl.onrender.com/api/auth/signup', { username, email, password });
       history('/login');
     } catch (err) {
       setError(err.response?.data?.message || 'An error occurred. Please try again.');

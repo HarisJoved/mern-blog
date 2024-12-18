@@ -110,7 +110,7 @@ app.get('/api/posts', async (req, res) => {
 app.post('/api/posts', authMiddleware, upload.single('image'), async (req, res) => {
   try {
     const { title, content } = req.body;
-    const image = req.file ? `http://localhost:5000/uploads/${req.file.filename}` : null;
+    const image = req.file ? `https://mern-blog-backend-7svl.onrender.com/uploads/${req.file.filename}` : null;
     const post = await BlogPost.create({ 
       title, 
       content, 
@@ -137,7 +137,7 @@ app.get('/api/posts/:id', async (req, res) => {
 app.put('/api/posts/:id', authMiddleware, upload.single('image'), async (req, res) => {
   try {
     const { title, content } = req.body;
-    const image = req.file ? `http://localhost:5000/uploads/${req.file.filename}` : req.body.image;
+    const image = req.file ? `https://mern-blog-backend-7svl.onrender.com/uploads/${req.file.filename}` : req.body.image;
     const post = await BlogPost.findOneAndUpdate(
       { _id: req.params.id, author: req.user.userId },
       { title, content, image },
@@ -174,7 +174,7 @@ app.get('/api/users/:id', authMiddleware, async (req, res) => {
 app.put('/api/users/:id', authMiddleware, upload.single('profileImage'), async (req, res) => {
   try {
     const { username, email, bio } = req.body;
-    const profileImage = req.file ? `http://localhost:5000/uploads/${req.file.filename}` : req.body.profileImage;
+    const profileImage = req.file ? `https://mern-blog-backend-7svl.onrender.com/uploads/${req.file.filename}` : req.body.profileImage;
     const user = await User.findOneAndUpdate(
       { _id: req.params.id, _id: req.user.userId },
       { username, email, profileImage, bio },
