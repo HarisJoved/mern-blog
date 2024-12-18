@@ -18,7 +18,7 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/${id}`, {
+        const res = await axios.get(`https://mern-blog-backend-7svl.onrender.com/api/users/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setUser(res.data);
@@ -36,7 +36,7 @@ const UserProfile = () => {
   const handleEdit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/api/users/${id}`,
+      const res = await axios.put(`https://mern-blog-backend-7svl.onrender.com/api/users/${id}`,
         { username, email, profileImage, bio },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -50,7 +50,7 @@ const UserProfile = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/${id}`, {
+        await axios.delete(`https://mern-blog-backend-7svl.onrender.com/api/users/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         localStorage.removeItem('token');
