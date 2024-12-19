@@ -5,7 +5,7 @@ npm start (frontend)
 add your own database script in .env file
 
 
-Homepage: ![screenshot](Homeage.png)
+Homepage: ![screenshot](Homepage.png)
 
 
 
