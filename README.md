@@ -14,6 +14,7 @@ Signup Page:
 Create Post Page:
  
 Post Detail Page:
+ ![screenshot](Detail.png)
  
 User Profile Page:
  
