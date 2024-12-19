@@ -5,21 +5,27 @@ npm start (frontend)
 add your own database script in .env file
 
 
-Homepage:
-![screenshot](HomePage.png)
+Homepage: ![screenshot](Homeage.png)
 
-Login Page:
-![screenshot](LoginPage.png)
+
+
+Login Page: ![screenshot](LoginPage.png)
+
+
  
-Signup Page:
-![screenshot](SignupPage.png)
+Signup Page: ![screenshot](SignupPage.png)
+
+
  
-Create Post Page:
-![screenshot](CreatePost.png)
+Create Post Page: ![screenshot](CreatePost.png)
+
+
  
-Post Detail Page:
-![screenshot](Detail.png)
+Post Detail Page: ![screenshot](Detail.png)
+
+
  
-Profile Page:
-![screenshot](Profile.png)
+Profile Page: ![screenshot](Profile.png)
+
+
  
