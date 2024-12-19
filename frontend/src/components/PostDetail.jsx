@@ -17,7 +17,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get(`https://mern-blog-backend-7svl.onrender.com/api/posts/${id}`, {
+        const res = await axios.get(`http://localhost:5000/api/posts/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setPost(res.data);
@@ -40,7 +40,7 @@ const PostDetail = () => {
     }
 
     try {
-      const res = await axios.put(`https://mern-blog-backend-7svl.onrender.com/api/posts/${id}`,
+      const res = await axios.put(`http://localhost:5000/api/posts/${id}`,
         formData,
         {
           headers: {
@@ -59,7 +59,7 @@ const PostDetail = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this post?')) {
       try {
-        await axios.delete(`https://mern-blog-backend-7svl.onrender.com/api/posts/${id}`, {
+        await axios.delete(`http://localhost:5000/api/posts/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         history('/');
